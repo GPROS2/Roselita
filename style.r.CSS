@@ -1,60 +1,46 @@
-body {
-	background-color: #FFE436;
-	color: #000000;
-}
+/* Corps de page */
 body {
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
+  background-image: url('https://gpros2.github.io/Roselita/Couverture%20de%20Roselita%20et%20le%20parfum%20magique.png');
+  color: #000000;
 }
 
+/* Suppression des bandes */
 .bande-gauche,
 .bande-droite {
-  width: 60px;
-  background-color: #FFD700;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  z-index: 1;
+  display: none;
 }
 
-.bande-gauche {
-  left: 0;
-}
-
-.bande-droite {
-  right: 0;
-}
-
+/* Contenu principal */
 .contenu {
   width: 80%;
   max-width: 1000px;
-  z-index: 2;
   position: relative;
-  background-color: ;
+  z-index: 2;
+  background-color: #FFE4C4;
   padding: 20px;
 }
-@media only screen and (max-width: 768px) {
-  .bande-gauche,
-  .bande-droite {
-    display: none; /* On cache les bandes sur petit écran */
-  }
 
+/* Responsive */
+@media only screen and (max-width: 768px) {
   .contenu {
     width: 90%;
     padding: 10px;
   }
 
   body {
-    background-color: #F0E36B;
-	color: #E67E30;
+    background-color: #8B6C42;
+    color: #E8D630;
   }
 }
 
+/* Boutons */
 button {
   padding: 10px 20px;
-  background-color: #FFD700;
+  background-color: #3366cc;
   color: white;
   border: none;
   border-radius: 5px;
@@ -64,56 +50,28 @@ button {
 }
 
 button:hover {
-  background-color: #3366cc;
+  background-color: #FFE436;
 }
+
+/* Tableaux */
 table {
   width: 100%;
   border-collapse: collapse;
   margin: 20px 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 16px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-thead {
   background-color: #FFE436;
-  color: #FFE436;
 }
 
 th, td {
-  padding: 12px 15px;
+  border: 1px solid #8B6C42;
+  padding: 12px;
   text-align: left;
-  border-bottom: 1px solid #ddd;
+}
+
+thead {
+  background-color: #3366cc;
+  color: white;
 }
 
 tr:hover {
-  background-color: #f1f1f1;
-}
-
-@media screen and (max-width: 600px) {
-  table, thead, tbody, th, td, tr {
-    display: block;
-  }
-
-  th {
-    position: sticky;
-    top: 0;
-    background-color: #FFD700;
-    color: white;
-  }
-
-  td {
-    padding: 10px;
-    border: none;
-    border-bottom: 1px solid #eee;
-    position: relative;
-    padding-left: 50%;
-  }
-
-  td::before {
-    content: attr(data-label);
-    position: absolute;
-    left: 10px;
-    font-weight: bold;
-  }
+  background-color: #f0f0f0;
 }
